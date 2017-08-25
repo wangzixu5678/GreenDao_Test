@@ -20,9 +20,9 @@ android {
     }
 }
 greendao {
-    schemaVersion 1
-    //daoPackage 'com.greendao.gen'
-    //targetGenDir 'src/main/java'
+    schemaVersion 5
+//    daoPackage 'com.greendao'
+//    targetGenDir 'src/main/greendao'
 }
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])

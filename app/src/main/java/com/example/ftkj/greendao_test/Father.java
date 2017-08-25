@@ -34,14 +34,28 @@ public class Father{
     @Generated(hash = 442328359)
     private transient FatherDao myDao;
 
+    private String address;
+
+    private String newaddress;
+
+    private String new2address;
+
+    private String new3address;
 
 
 
-    @Generated(hash = 398136730)
-    public Father(Long id, String name, int age) {
+
+
+    @Generated(hash = 1021719366)
+    public Father(Long id, String name, int age, String address, String newaddress, String new2address,
+            String new3address) {
         this.id = id;
         this.name = name;
         this.age = age;
+        this.address = address;
+        this.newaddress = newaddress;
+        this.new2address = new2address;
+        this.new3address = new3address;
     }
 
 
@@ -50,18 +64,15 @@ public class Father{
     public Father() {
     }
 
-   
 
-    @Override
-    public String toString() {
-        return "Father{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                '}';
+    public Father(Long id, String name, int age, String newaddress, String new2address, String new3address) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.newaddress = newaddress;
+        this.new2address = new2address;
+        this.new3address = new3address;
     }
-
-
 
     public Long getId() {
         return this.id;
@@ -97,7 +108,18 @@ public class Father{
         this.age = age;
     }
 
-
+    @Override
+    public String toString() {
+        return "Father{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", address='" + address + '\'' +
+                ", newaddress='" + newaddress + '\'' +
+                ", new2address='" + new2address + '\'' +
+                ", new3address='" + new3address + '\'' +
+                '}';
+    }
 
     /**
      * To-many relationship, resolved on first access (and after reset).
@@ -169,6 +191,58 @@ public class Father{
             throw new DaoException("Entity is detached from DAO context");
         }
         myDao.update(this);
+    }
+
+
+
+
+
+
+
+    public String getAddress() {
+        return this.address;
+    }
+
+
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+
+
+    public String getNewaddress() {
+        return this.newaddress;
+    }
+
+
+
+    public void setNewaddress(String newaddress) {
+        this.newaddress = newaddress;
+    }
+
+
+
+    public String getNew2address() {
+        return this.new2address;
+    }
+
+
+
+    public void setNew2address(String new2address) {
+        this.new2address = new2address;
+    }
+
+
+
+    public String getNew3address() {
+        return this.new3address;
+    }
+
+
+
+    public void setNew3address(String new3address) {
+        this.new3address = new3address;
     }
 
 

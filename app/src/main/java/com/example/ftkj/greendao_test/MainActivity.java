@@ -34,10 +34,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_add:
+                mGM.insertAllData();
                 break;
             case R.id.btn_del:
                 break;
             case R.id.btn_update:
+                mGM.updataAll();
                 break;
             case R.id.btn_query:
                 mGM.querySonofFather();
